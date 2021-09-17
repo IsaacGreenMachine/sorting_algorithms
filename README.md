@@ -13,7 +13,7 @@ implementing sorting algorithms
 
 ## Tasks
 List of tasks with brief descriptions of each task.
-### 0. Bubble Sort
-### 1. Insertion Sort
-### 2. Selection Sort
-### 3. Quick Sort
+### 0. Bubble Sort O(n^2)
+### 1. Insertion Sort O(n^2)
+### 2. Selection Sort O(n^2)
+### 3. Quick Sort O(log n)
