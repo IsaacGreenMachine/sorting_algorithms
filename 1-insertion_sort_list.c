@@ -7,9 +7,9 @@
 void insertion_sort_list(listint_t **list)
 {
 listint_t *current, *moving;
-current = (*list)->next;
 if (list == NULL || *list == NULL)
 return;
+current = (*list)->next;
 while (current != NULL)
 {
 moving = current;
