@@ -26,4 +26,5 @@ void quick_sort(int *array, size_t size);
 void swapNums(int *a, int *b);
 int getIndexOfNode(listint_t *node);
 void moveNodeLeft(listint_t **head, listint_t *node);
+void sort(int *array, size_t size, int *fullArray, int fullSize);
 #endif
