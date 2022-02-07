@@ -1,6 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "sort.h"
+/**
+ * printThatArray - prints a slice of an array
+ * @start: start printing here
+ * @end: stop printing here
+ * @array: array to print
+ * Return: Always void
+ */
+void printThatArray(int start, int end, int *array)
+{
+for (int i = start; i < end; i++)
+{
+printf("%i", array[i]);
+if (i < end - 1)
+printf(", ");
+else
+printf("\n");
+}
+}
+
 
 /**
  * CopyArray - copies array from one to another
@@ -34,7 +53,6 @@ B[k] = A[k];
 void TopDownMerge(int A[], int iBegin, int iMiddle, int iEnd, int B[])
 {
 int i = iBegin, j = iMiddle;
-
 /* While there are elements in the left or right runs... */
 int k = iBegin;
 for (; k < iEnd; k++)
@@ -51,6 +69,13 @@ B[k] = A[j];
 j = j + 1;
 }
 }
+printf("Merging...\n");
+printf(" [left]: ");
+printThatArray(iBegin, iMiddle, A);
+printf(" [right]: ");
+printThatArray(iMiddle, iEnd, A);
+printf(" [Done]: ");
+printThatArray(iBegin, iEnd, B);
 }
 
 /*
