@@ -71,11 +71,11 @@ j = j + 1;
 }
 }
 printf("Merging...\n");
-printf(" [left]: ");
+printf("[left]: ");
 printThatArray(iBegin, iMiddle, A);
-printf(" [right]: ");
+printf("[right]: ");
 printThatArray(iMiddle, iEnd, A);
-printf(" [Done]: ");
+printf("[Done]: ");
 printThatArray(iBegin, iEnd, B);
 }
 
