@@ -10,7 +10,8 @@
  */
 void printThatArray(int start, int end, int *array)
 {
-for (int i = start; i < end; i++)
+int i = start;
+for (int i; i < end; i++)
 {
 printf("%i", array[i]);
 if (i < end - 1)
