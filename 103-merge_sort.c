@@ -71,7 +71,8 @@ void TopDownSplitMerge(int B[], int iBegin, int iEnd, int A[])
 if (iEnd - iBegin <= 1)                     /* if run size == 1 */
 return;                                 /*   consider it sorted */
 /* split the run longer than 1 item into halves */
-int iMiddle = (iEnd + iBegin) / 2;              /* iMiddle = mid point */
+int iMiddle;
+iMiddle = (iEnd + iBegin) / 2;              /* iMiddle = mid point */
 /* recursively sort both runs from array A[] into B[] */
 TopDownSplitMerge(A, iBegin,  iMiddle, B);  /* sort the left run */
 TopDownSplitMerge(A, iMiddle,    iEnd, B);  /* sort the right run */
@@ -88,7 +89,7 @@ TopDownMerge(B, iBegin, iMiddle, iEnd, A);
  */
 void merge_sort(int *array, size_t size)
 {
-int dummy[size];
+int dummy[1024];
 CopyArray(array, 0, size, dummy);           /* one time copy of A[] to B[] */
 TopDownSplitMerge(dummy, 0, size, array);   /* sort data from B[] into A[] */
 }
