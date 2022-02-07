@@ -12,7 +12,8 @@
  */
 void CopyArray(int A[], int iBegin, int iEnd, int B[])
 {
-for (int k = iBegin; k < iEnd; k++)
+int k = iBegin;
+for (; k < iEnd; k++)
 B[k] = A[k];
 }
 
@@ -35,7 +36,8 @@ void TopDownMerge(int A[], int iBegin, int iMiddle, int iEnd, int B[])
 int i = iBegin, j = iMiddle;
 
 /* While there are elements in the left or right runs... */
-for (int k = iBegin; k < iEnd; k++)
+int k = iBegin;
+for (; k < iEnd; k++)
 {
 /* If left run head exists and is <= existing right run head. */
 if (i < iMiddle && (j >= iEnd || A[i] <= A[j]))
