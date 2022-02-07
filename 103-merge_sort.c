@@ -11,7 +11,7 @@
 void printThatArray(int start, int end, int *array)
 {
 int i = start;
-for (int i; i < end; i++)
+for (; i < end; i++)
 {
 printf("%i", array[i]);
 if (i < end - 1)
