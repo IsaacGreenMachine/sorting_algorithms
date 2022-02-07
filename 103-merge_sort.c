@@ -68,10 +68,10 @@ j = j + 1;
  */
 void TopDownSplitMerge(int B[], int iBegin, int iEnd, int A[])
 {
+int iMiddle;
 if (iEnd - iBegin <= 1)                     /* if run size == 1 */
 return;                                 /*   consider it sorted */
 /* split the run longer than 1 item into halves */
-int iMiddle;
 iMiddle = (iEnd + iBegin) / 2;              /* iMiddle = mid point */
 /* recursively sort both runs from array A[] into B[] */
 TopDownSplitMerge(A, iBegin,  iMiddle, B);  /* sort the left run */
