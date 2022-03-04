@@ -29,4 +29,5 @@ void moveNodeLeft(listint_t **head, listint_t *node);
 void sort(int *array, size_t size, int *fullArray, int fullSize);
 void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
 #endif
