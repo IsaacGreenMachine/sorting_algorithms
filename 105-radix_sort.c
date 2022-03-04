@@ -68,6 +68,8 @@ free(output);
  */
 void radix_sort(int *array, size_t size)
 {
+if (array != NULL)
+{
 int place;
 /* Get maximum element */
 int maxval;
@@ -76,7 +78,11 @@ maxval = getMax(array, size);
 /* Apply counting sort to sort elements based on place value. */
 for (place = 1; maxval / place > 0; place *= 10)
 {
-countingSort(array, size, place);
+if (place > 1)
 print_array(array, size);
+countingSort(array, size, place);
+if (maxval / place < 10)
+print_array(array, size);
+}
 }
 }
